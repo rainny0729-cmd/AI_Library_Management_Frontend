@@ -1,0 +1,71 @@
+.app-background {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(56, 189, 248, 0.18), transparent 32rem),
+    radial-gradient(circle at 82% 16%, rgba(74, 222, 128, 0.12), transparent 28rem),
+    linear-gradient(140deg, #07111f 0%, #0b1324 48%, #08111f 100%);
+}
+
+.surface {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.76), rgba(15, 23, 42, 0.58));
+  box-shadow: 0 18px 55px rgba(2, 8, 23, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.surface-light {
+  border: 1px solid rgba(203, 213, 225, 0.72);
+  background: rgba(248, 250, 252, 0.96);
+  color: #0f172a;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.16);
+}
+
+.hairline {
+  position: relative;
+}
+
+.hairline::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  border-radius: inherit;
+  background:
+    linear-gradient(120deg, rgba(56, 189, 248, 0.26), transparent 26%),
+    linear-gradient(280deg, rgba(74, 222, 128, 0.22), transparent 30%);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  padding: 1px;
+}
+
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.38);
+  border-radius: 999px;
+}
+
+.digital-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.aurora-line {
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.62), rgba(74, 222, 128, 0.5), transparent);
+}
+
+.metric-number {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
